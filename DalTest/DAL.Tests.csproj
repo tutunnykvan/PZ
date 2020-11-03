@@ -6,7 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA8579CB-B173-4383-8762-92BB8E25E7A9}</ProjectGuid>
+    <ProjectGuid>{3C4C9CA9-6992-4BB8-BD65-360511B795F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL.Tests</RootNamespace>

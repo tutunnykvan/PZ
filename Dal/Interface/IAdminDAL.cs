@@ -14,5 +14,6 @@ namespace DAL.Interface
         AdminDTO UpdateAdmin(AdminDTO admin);
         AdminDTO CreateAdmin(AdminDTO admin);
         void DeleteAdmin(int id);
+        bool Login(string username, string password);
     }
 }

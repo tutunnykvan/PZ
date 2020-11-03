@@ -1,0 +1,5 @@
+C:\Users\Петро\Desktop\Іван\Admin\1\PZ-main\PZ-main\DTO\bin\Debug\DTO.dll
+C:\Users\Петро\Desktop\Іван\Admin\1\PZ-main\PZ-main\DTO\bin\Debug\DTO.pdb
+C:\Users\Петро\Desktop\Іван\Admin\1\PZ-main\PZ-main\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Петро\Desktop\Іван\Admin\1\PZ-main\PZ-main\DTO\obj\Debug\DTO.dll
+C:\Users\Петро\Desktop\Іван\Admin\1\PZ-main\PZ-main\DTO\obj\Debug\DTO.pdb

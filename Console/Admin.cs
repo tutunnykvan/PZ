@@ -13,7 +13,7 @@ namespace Console
     {
         AdminDAL dal = new AdminDAL(ConfigurationManager.ConnectionStrings["IMDB"].ConnectionString);
         AdminDTO admin;
-        public void UserDALMenu()
+       public void AdminDALMenu()
         {
             while (true)
             {
@@ -50,10 +50,10 @@ namespace Console
                         System.Console.ReadKey();
                         break;
                     case "rall":
-                        List<AdminDTO> categories = dal.GetAllAdmin();
-                        for (int i = 0; i < admin.Count; i++)
+                        List<AdminDTO> admins = dal.GetAllAdmin();
+                        for (int i = 0; i < admins.Count; i++)
                         {
-                            System.Console.WriteLine("Id - " + admin[i].Id + " Email - " + admin[i].StartingWorking);
+                            System.Console.WriteLine("Id - " + admins[i].Id + " Email - " + admins[i].StartingWorking);
                         }
                         System.Console.WriteLine("Press any key");
                         System.Console.WriteLine("");

@@ -4,17 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using DAL;
 using DAL.Concrete;
-namespace ConsoleApp5
-{
+namespace Console
+{ 
     class MainMenu
     {
 
-        Person P = new Perosn();
-        Admin A = new Admin(); 
-        Role R = new Role();
-        User U = new User();
-        public void Start()
+        static  void Main() { Start(); }
+
+
+       static Person P = new Person();
+        static Admin A = new Admin();
+        static Role R = new Role();
+        static User U = new User();
+       static public  void Start()
         {
             System.Console.WriteLine("Welcome in Console");
 

@@ -120,6 +120,31 @@ namespace DAL.Concrete
             }
         }
 
+        bool Login(string username, string password)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                comm.CommandText = "select UserEmail, UserPassword from User JOIN User ON Person.PersonId where Person.RoleId = 2 AND UserEmail = @email AND UserPassword = @password";
+               
+                comm.Parameters.Clear();
+                comm.Parameters.AddWithValue("@email", username);
+                comm.Parameters.AddWithValue("@password", password);
+                conn.Open();
+
+                SqlDataReader reader = comm.ExecuteReader();
+
+                string _email = (string)reader["UserEmail"];
+                string _password = (string)reader["UserPassword"];
+
+                return _email != null && _password != null;
+
+            }
+
+
+
+        }
+
     }
 
 
