@@ -1,0 +1,99 @@
+﻿<Window x:Class="Wpf.Windows.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf.Windows"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="Login" Height="550" Width="400"
+    AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFF11B1B" Offset="0"/>
+                    <GradientStop Color="#FFFDF65D" Offset="0.4"/>
+                    <GradientStop Color="#FF7BF686" Offset="0.6"/>
+                    <GradientStop Color="#FF7BF0F6" Offset="0.8"/>
+                    <GradientStop Color="#FF7BF686" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock Text="Admin Database" 
+                           FontWeight="Light" 
+                           FontSize="22" 
+                           FontFamily="Helvetica"
+                           HorizontalAlignment="Center"
+                           Foreground="White"/>
+            <Image Source="../Image/logo.png" Margin="100,10,100,10" Height="150" RenderTransformOrigin="-0.85,3.33" />
+        </StackPanel>
+
+
+       
+           <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontFamily="Helvetica"
+                               FontWeight="Light" 
+                           FontSize="20"
+                           Foreground="White" 
+                           Background="Transparent"
+                           Text="{Binding Username}"
+                           Opacity="0.5"
+                           Width="240"
+                           Height="25"
+                           Margin="70, 0, 0, 0"/>
+                <iconPacks:PackIconMaterial Kind="AccountCircle"
+                                 VerticalAlignment="Center"
+                                 Foreground="White"
+                                 HorizontalAlignment="Center"
+                                 Width="20" Height="20" Opacity="0.5"/>
+            </StackPanel>
+            <Border Width="235" Height="2" Background="White" Opacity="0.5"/>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 0">
+                <PasswordBox FontFamily="Helvetica" 
+                           FontWeight="Light" 
+                           FontSize="20"
+                           Foreground="White" 
+                           Background="Transparent"
+                           Opacity="0.5"
+                           Width="240"
+                           Height="25"
+                           Margin="70, 0, 0, 0" PasswordChanged="PasswordBox_PasswordChanged"/>
+                <iconPacks:PackIconMaterial Kind="Lock"
+                                 VerticalAlignment="Center"
+                                 Foreground="White"
+                                 HorizontalAlignment="Center"
+                                 Width="20" Height="20" Opacity="0.5"/>
+            </StackPanel>
+            <Border Width="235" Height="2" Background="White" Opacity="0.5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,50,0,0" HorizontalAlignment="Center">
+                <Button Width="100" Height="40" Content="Cancel" Margin="0,0,50,0" Name="btnCancel" Click="Cancel_Click"></Button>
+                <Button Width="100" Height="40" Content="Login" Name="btnLogin" Click="Login_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
+
